@@ -7,3 +7,4 @@ six==1.11.0
 urllib3==1.22
 beautifulsoup4=4.6.0
 bs4=0.0.1
+lxml=4.2.1
