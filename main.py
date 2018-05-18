@@ -24,7 +24,7 @@ def get_all_links(html, maxsearch):
     # except:
     #     print('По вашему запросу ничего не обнаружено')
     #     exit(0)
-    soup = BeautifulSoup(html, 'lxml')
+    #soup = BeautifulSoup(html, 'lxml')
     print(soup)
     tds = soup.find('table', class_='t_peer w100p').find_all('td', class_='nam')
     links = []
