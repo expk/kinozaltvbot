@@ -8,6 +8,7 @@ name = "pypi"
 requests = "*"
 bencodepy = "*"
 bs4 = "*"
+lxml = "*"
 
 [dev-packages]
 

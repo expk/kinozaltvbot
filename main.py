@@ -14,23 +14,25 @@ def get_html (url):
 
 
 def get_all_links(html, maxsearch):
-    try:
-        soup = BeautifulSoup(html, 'lxml')
-    except:
-        print('Страница со списком найденных торрентов не загружена')
-        exit(0)
-    try:
-        tds = soup.find('table', class_='t_peer w100p').find_all('td', class_='nam')
-    except:
-        print('По вашему запросу ничего не обнаружено')
-        exit(0)
-
+    # try:
+    #     soup = BeautifulSoup(html, 'lxml')
+    # except:
+    #     print('Страница со списком найденных торрентов не загружена')
+    #     exit(0)
+    # try:
+    #     tds = soup.find('table', class_='t_peer w100p').find_all('td', class_='nam')
+    # except:
+    #     print('По вашему запросу ничего не обнаружено')
+    #     exit(0)
+    soup = BeautifulSoup(html, 'lxml')
+    tds = soup.find('table', class_='t_peer w100p').find_all('td', class_='nam')
     links = []
 
     # session = requests.session()                            # Авторизация
     # url_login = 'http://kinozal.tv/takelogin.php'           #
     # data = {'username': 'expk13', 'password': 'expk--'}     #
     # session.post(url_login, data=data).text                 #
+
 
     i = 0
     for td in tds:
